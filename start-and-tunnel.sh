@@ -6,6 +6,8 @@ set -e
 # Start the SSH tunnel in the background
 # The -f flag sends ssh to the background. -N means do not execute a remote command.
 KEY_FILE="/root/.ssh/id_rsa"
+mkdir -p /root/.ssh
+chmod 700 /root/.ssh
 echo "Starting SSH tunnel..."
 echo "Storing ssh key in $KEY_FILE"
 touch $KEY_FILE
