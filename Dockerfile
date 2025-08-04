@@ -1,22 +1,23 @@
-# 1. Install production dependencies
-FROM node:20-alpine AS deps
+# 0. Base image with pnpm installed
+FROM node:20-alpine AS base
 RUN npm install -g pnpm
+
+# 1. Install production dependencies
+FROM base AS deps
 WORKDIR /app
 COPY package.json pnpm-lock.yaml ./
 RUN pnpm install --frozen-lockfile --prod
 
 # 2. Build the application
-FROM node:20-alpine AS builder
-RUN npm install -g pnpm
+FROM base AS builder
 WORKDIR /app
 COPY . .
 RUN pnpm install --frozen-lockfile
 RUN pnpm build
 
 # 3. Production image
-FROM node:20-alpine AS runner
+FROM base AS runner
 WORKDIR /app
-# Install SSH client
 RUN apk add --no-cache openssh-client
 
 # Copy built app and dependencies
@@ -26,9 +27,6 @@ COPY package.json ./
 
 # Copy the startup script
 COPY start-and-tunnel.sh .
-
-# Install pnpm for the start script
-RUN npm install -g pnpm
 
 # Set the entrypoint to our new script
 ENTRYPOINT ["./start-and-tunnel.sh"]
