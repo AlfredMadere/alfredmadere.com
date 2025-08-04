@@ -15,11 +15,12 @@ chmod 600 $KEY_FILE
 echo "$PRIV_KEY" | base64 -d > $KEY_FILE
 # Start the SSH tunnel in a persistent background loop
 (
+  set +e
   while true; do
     echo "Starting SSH tunnel..."
     ssh -o StrictHostKeyChecking=no \
-        -o ServerAliveInterval=60 \
-        -o ServerAliveCountMax=5 \
+        -o ServerAliveInterval=10 \
+        -o ServerAliveCountMax=3 \
         -o TCPKeepAlive=yes \
         -o ExitOnForwardFailure=yes \
         -N -i $KEY_FILE -R 8085:localhost:3000 ssh-tunnel@54.71.13.19
