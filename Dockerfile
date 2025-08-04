@@ -27,10 +27,6 @@ COPY package.json ./
 # Copy the startup script
 COPY start-and-tunnel.sh .
 
-# Mount the SSH key secret during build and copy it to the correct location.
-# The key will NOT be in the final image layers.
-RUN --mount=type=secret,id=ssh_key,dst=/tmp/ssh_key mkdir -p /root/.ssh && cat /tmp/ssh_key > /root/.ssh/id_rsa && chmod 600 /root/.ssh/id_rsa
-
 # Install pnpm for the start script
 RUN npm install -g pnpm
 
