@@ -28,12 +28,15 @@ export function Home() {
             <p>I'm an engineer and an entrepreneur at heart. My focus is on tackling the engineering challenges of AI and scalable, data-intensive applications.</p>
             <p>
               {"Working at "}
-              <a className="underline" href="https://www.cascading.ai/">Casca</a>
+              <a className="underline" href="https://cascading.ai/">Casca</a>
               <br />
               {"Creator of "}
-              <a className="underline" href="https://www.paperwatch.io/">Paperwatch</a>
-              {" "} 
-              <a className="underline" href="https://www.choretracker.app/">Choretracker</a>
+              <a className="underline" href="https://paperwatch.io/">Paperwatch</a>
+              {/* {" "}
+              <a className="underline" href="https://choretracker.app/">Choretracker</a> */}
+              <br />
+              Read my <a href="/resume.pdf" target="_blank">Resume</a>
+
 
             </p>
             <p >
@@ -41,8 +44,11 @@ export function Home() {
               <i> transportation sport </i> hobbies like
               <a className="underline" href="https://en.wikipedia.org/wiki/Windsurfing"> windsurfing</a>,
               <a className="underline" href="https://en.wikipedia.org/wiki/Rock_climbing"> climbing</a> and
-              <a className="underline" href="https://en.wikipedia.org/wiki/Wing_foiling"> wingfoiling</a>.
+              <a className="underline" href="https://en.wikipedia.org/wiki/Mountain_biking"> mountain biking</a>.
             </p>
+            <p>I recently made the move to San Francisco, if you're in the area, let's get a coffee together.</p>
+            <p>Find me on <a href="https://www.linkedin.com/in/alfred-madere/">LinkedIn</a>, <a href="https://github.com/AlfredMadere">GitHub</a>, <a href="https://twitter.com/alfredmadere">X,</a> <a href="https://www.instagram.com/alfred_madere/">Instagram</a></p>
+            <p>Or mail me at <span className="font-mono text-gray-400 dark:text-gray-400">hi@alfredmadere.com</span></p>
           </div>
         </div>
       </article>
