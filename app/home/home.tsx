@@ -1,11 +1,12 @@
 import { Github, Linkedin, Twitter } from "lucide-react";
 import { DotPattern } from "../components/ui/dot-pattern";
 import { DarkModeToggle } from "../components/dark-mode-toggle";
+import DotPatternAnimated from "~/components/ui/dot-pattern-animated";
 
 export function Home() {
   return (
     <main className="h-screen  relative">
-      <DotPattern />
+      <DotPatternAnimated />
       <div className="w-full flex justify-between p-8">
         <div className="text-2xl font-bold text-black dark:text-white">
           AM
