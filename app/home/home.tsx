@@ -46,6 +46,8 @@ export function Home() {
               <a className="underline" href="https://en.wikipedia.org/wiki/Windsurfing"> windsurfing</a>,
               <a className="underline" href="https://en.wikipedia.org/wiki/Rock_climbing"> climbing</a> and
               <a className="underline" href="https://en.wikipedia.org/wiki/Mountain_biking"> mountain biking</a>.
+              I also love music, and taught jazz saxophone lessons for 5 years. I'm fascinated by the mechanisms of 
+              human learning, and find teaching to be extremely rewarding.
             </p>
             <p>I recently made the move to San Francisco, if you're in the area, let's get a coffee together.</p>
             <p>Find me on <a href="https://www.linkedin.com/in/alfred-madere/">LinkedIn</a>, <a href="https://github.com/AlfredMadere">GitHub</a>, <a href="https://twitter.com/alfredmadere">X,</a> <a href="https://www.instagram.com/alfred_madere/">Instagram</a></p>
