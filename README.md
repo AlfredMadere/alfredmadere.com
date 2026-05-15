@@ -1,4 +1,11 @@
-# Welcome to React Router!
+# Alfredmadere.com website
+
+## TLDR:  
+
+```
+docker build -t alfredmadere .
+./start_alfredmadere_com.sh
+```
 
 A modern, production-ready template for building full-stack React applications using React Router.
 
