@@ -1,11 +1,17 @@
 # Alfredmadere.com website
 
-## TLDR:  
+## TLDR:
+
+Deploy (pull → build → swap named container → health check, with auto-rollback):
 
 ```
-docker build -t alfredmadere .
-./start_alfredmadere_com.sh
+# from laptop
+ssh -t homeserver1-ext '/home/alfred/alfredmadere.com/deploy.sh'
+# or on the server
+./deploy.sh
 ```
+
+Manual restart after a stop: `docker start alfredmadere` (named, persistent container).
 
 A modern, production-ready template for building full-stack React applications using React Router.
 
